@@ -23,4 +23,7 @@ message HelloListResponse {
 service HelloService {
   rpc hello(HelloRequest) returns (HelloResponse){}
   rpc helloList(HelloListRequest) returns (HelloListResponse){}
+  rpc c2ss(HelloRequest) returns (stream HelloResponse){}
+  rpc cs2s(stream HelloRequest) returns (HelloResponse){}
+  rpc cs2ss(stream HelloRequest) returns (stream HelloResponse){}
 }

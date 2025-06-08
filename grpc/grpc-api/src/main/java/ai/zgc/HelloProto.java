@@ -1119,6 +1119,1242 @@ public final class HelloProto {
 
   }
 
+  public interface HelloListRequestOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:HelloListRequest)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string name = 1;</code>
+     * @return A list containing the name.
+     */
+    java.util.List<java.lang.String>
+        getNameList();
+    /**
+     * <code>repeated string name = 1;</code>
+     * @return The count of name.
+     */
+    int getNameCount();
+    /**
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the element to return.
+     * @return The name at the given index.
+     */
+    java.lang.String getName(int index);
+    /**
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the name at the given index.
+     */
+    com.google.protobuf.ByteString
+        getNameBytes(int index);
+  }
+  /**
+   * Protobuf type {@code HelloListRequest}
+   */
+  public static final class HelloListRequest extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:HelloListRequest)
+      HelloListRequestOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HelloListRequest.newBuilder() to construct.
+    private HelloListRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HelloListRequest() {
+      name_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HelloListRequest();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ai.zgc.HelloProto.internal_static_HelloListRequest_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ai.zgc.HelloProto.internal_static_HelloListRequest_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ai.zgc.HelloProto.HelloListRequest.class, ai.zgc.HelloProto.HelloListRequest.Builder.class);
+    }
+
+    public static final int NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList name_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string name = 1;</code>
+     * @return A list containing the name.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getNameList() {
+      return name_;
+    }
+    /**
+     * <code>repeated string name = 1;</code>
+     * @return The count of name.
+     */
+    public int getNameCount() {
+      return name_.size();
+    }
+    /**
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the element to return.
+     * @return The name at the given index.
+     */
+    public java.lang.String getName(int index) {
+      return name_.get(index);
+    }
+    /**
+     * <code>repeated string name = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the name at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes(int index) {
+      return name_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < name_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < name_.size(); i++) {
+          dataSize += computeStringSizeNoTag(name_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getNameList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ai.zgc.HelloProto.HelloListRequest)) {
+        return super.equals(obj);
+      }
+      ai.zgc.HelloProto.HelloListRequest other = (ai.zgc.HelloProto.HelloListRequest) obj;
+
+      if (!getNameList()
+          .equals(other.getNameList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getNameCount() > 0) {
+        hash = (37 * hash) + NAME_FIELD_NUMBER;
+        hash = (53 * hash) + getNameList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ai.zgc.HelloProto.HelloListRequest parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ai.zgc.HelloProto.HelloListRequest parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ai.zgc.HelloProto.HelloListRequest parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ai.zgc.HelloProto.HelloListRequest parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ai.zgc.HelloProto.HelloListRequest parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ai.zgc.HelloProto.HelloListRequest parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ai.zgc.HelloProto.HelloListRequest parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ai.zgc.HelloProto.HelloListRequest parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ai.zgc.HelloProto.HelloListRequest parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ai.zgc.HelloProto.HelloListRequest parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ai.zgc.HelloProto.HelloListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ai.zgc.HelloProto.HelloListRequest parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ai.zgc.HelloProto.HelloListRequest prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code HelloListRequest}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:HelloListRequest)
+        ai.zgc.HelloProto.HelloListRequestOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ai.zgc.HelloProto.internal_static_HelloListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ai.zgc.HelloProto.internal_static_HelloListRequest_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ai.zgc.HelloProto.HelloListRequest.class, ai.zgc.HelloProto.HelloListRequest.Builder.class);
+      }
+
+      // Construct using ai.zgc.HelloProto.HelloListRequest.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        name_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ai.zgc.HelloProto.internal_static_HelloListRequest_descriptor;
+      }
+
+      @java.lang.Override
+      public ai.zgc.HelloProto.HelloListRequest getDefaultInstanceForType() {
+        return ai.zgc.HelloProto.HelloListRequest.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ai.zgc.HelloProto.HelloListRequest build() {
+        ai.zgc.HelloProto.HelloListRequest result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ai.zgc.HelloProto.HelloListRequest buildPartial() {
+        ai.zgc.HelloProto.HelloListRequest result = new ai.zgc.HelloProto.HelloListRequest(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ai.zgc.HelloProto.HelloListRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          name_.makeImmutable();
+          result.name_ = name_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ai.zgc.HelloProto.HelloListRequest) {
+          return mergeFrom((ai.zgc.HelloProto.HelloListRequest)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ai.zgc.HelloProto.HelloListRequest other) {
+        if (other == ai.zgc.HelloProto.HelloListRequest.getDefaultInstance()) return this;
+        if (!other.name_.isEmpty()) {
+          if (name_.isEmpty()) {
+            name_ = other.name_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureNameIsMutable();
+            name_.addAll(other.name_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureNameIsMutable();
+                name_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList name_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureNameIsMutable() {
+        if (!name_.isModifiable()) {
+          name_ = new com.google.protobuf.LazyStringArrayList(name_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @return A list containing the name.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getNameList() {
+        name_.makeImmutable();
+        return name_;
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @return The count of name.
+       */
+      public int getNameCount() {
+        return name_.size();
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param index The index of the element to return.
+       * @return The name at the given index.
+       */
+      public java.lang.String getName(int index) {
+        return name_.get(index);
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the name at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getNameBytes(int index) {
+        return name_.getByteString(index);
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The name to set.
+       * @return This builder for chaining.
+       */
+      public Builder setName(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureNameIsMutable();
+        name_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param value The name to add.
+       * @return This builder for chaining.
+       */
+      public Builder addName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureNameIsMutable();
+        name_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param values The name to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllName(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureNameIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, name_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearName() {
+        name_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string name = 1;</code>
+       * @param value The bytes of the name to add.
+       * @return This builder for chaining.
+       */
+      public Builder addNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureNameIsMutable();
+        name_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:HelloListRequest)
+    }
+
+    // @@protoc_insertion_point(class_scope:HelloListRequest)
+    private static final ai.zgc.HelloProto.HelloListRequest DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ai.zgc.HelloProto.HelloListRequest();
+    }
+
+    public static ai.zgc.HelloProto.HelloListRequest getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HelloListRequest>
+        PARSER = new com.google.protobuf.AbstractParser<HelloListRequest>() {
+      @java.lang.Override
+      public HelloListRequest parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HelloListRequest> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HelloListRequest> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ai.zgc.HelloProto.HelloListRequest getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface HelloListResponseOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:HelloListResponse)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated string result = 1;</code>
+     * @return A list containing the result.
+     */
+    java.util.List<java.lang.String>
+        getResultList();
+    /**
+     * <code>repeated string result = 1;</code>
+     * @return The count of result.
+     */
+    int getResultCount();
+    /**
+     * <code>repeated string result = 1;</code>
+     * @param index The index of the element to return.
+     * @return The result at the given index.
+     */
+    java.lang.String getResult(int index);
+    /**
+     * <code>repeated string result = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the result at the given index.
+     */
+    com.google.protobuf.ByteString
+        getResultBytes(int index);
+  }
+  /**
+   * Protobuf type {@code HelloListResponse}
+   */
+  public static final class HelloListResponse extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:HelloListResponse)
+      HelloListResponseOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use HelloListResponse.newBuilder() to construct.
+    private HelloListResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private HelloListResponse() {
+      result_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new HelloListResponse();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ai.zgc.HelloProto.internal_static_HelloListResponse_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ai.zgc.HelloProto.internal_static_HelloListResponse_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ai.zgc.HelloProto.HelloListResponse.class, ai.zgc.HelloProto.HelloListResponse.Builder.class);
+    }
+
+    public static final int RESULT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.LazyStringArrayList result_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    /**
+     * <code>repeated string result = 1;</code>
+     * @return A list containing the result.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getResultList() {
+      return result_;
+    }
+    /**
+     * <code>repeated string result = 1;</code>
+     * @return The count of result.
+     */
+    public int getResultCount() {
+      return result_.size();
+    }
+    /**
+     * <code>repeated string result = 1;</code>
+     * @param index The index of the element to return.
+     * @return The result at the given index.
+     */
+    public java.lang.String getResult(int index) {
+      return result_.get(index);
+    }
+    /**
+     * <code>repeated string result = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the result at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getResultBytes(int index) {
+      return result_.getByteString(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < result_.size(); i++) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, result_.getRaw(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < result_.size(); i++) {
+          dataSize += computeStringSizeNoTag(result_.getRaw(i));
+        }
+        size += dataSize;
+        size += 1 * getResultList().size();
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ai.zgc.HelloProto.HelloListResponse)) {
+        return super.equals(obj);
+      }
+      ai.zgc.HelloProto.HelloListResponse other = (ai.zgc.HelloProto.HelloListResponse) obj;
+
+      if (!getResultList()
+          .equals(other.getResultList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getResultCount() > 0) {
+        hash = (37 * hash) + RESULT_FIELD_NUMBER;
+        hash = (53 * hash) + getResultList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ai.zgc.HelloProto.HelloListResponse parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ai.zgc.HelloProto.HelloListResponse parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ai.zgc.HelloProto.HelloListResponse parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ai.zgc.HelloProto.HelloListResponse parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ai.zgc.HelloProto.HelloListResponse parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ai.zgc.HelloProto.HelloListResponse parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ai.zgc.HelloProto.HelloListResponse parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ai.zgc.HelloProto.HelloListResponse parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ai.zgc.HelloProto.HelloListResponse parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ai.zgc.HelloProto.HelloListResponse parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ai.zgc.HelloProto.HelloListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ai.zgc.HelloProto.HelloListResponse parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ai.zgc.HelloProto.HelloListResponse prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code HelloListResponse}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:HelloListResponse)
+        ai.zgc.HelloProto.HelloListResponseOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ai.zgc.HelloProto.internal_static_HelloListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ai.zgc.HelloProto.internal_static_HelloListResponse_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ai.zgc.HelloProto.HelloListResponse.class, ai.zgc.HelloProto.HelloListResponse.Builder.class);
+      }
+
+      // Construct using ai.zgc.HelloProto.HelloListResponse.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        result_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ai.zgc.HelloProto.internal_static_HelloListResponse_descriptor;
+      }
+
+      @java.lang.Override
+      public ai.zgc.HelloProto.HelloListResponse getDefaultInstanceForType() {
+        return ai.zgc.HelloProto.HelloListResponse.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ai.zgc.HelloProto.HelloListResponse build() {
+        ai.zgc.HelloProto.HelloListResponse result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ai.zgc.HelloProto.HelloListResponse buildPartial() {
+        ai.zgc.HelloProto.HelloListResponse result = new ai.zgc.HelloProto.HelloListResponse(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(ai.zgc.HelloProto.HelloListResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result_.makeImmutable();
+          result.result_ = result_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ai.zgc.HelloProto.HelloListResponse) {
+          return mergeFrom((ai.zgc.HelloProto.HelloListResponse)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ai.zgc.HelloProto.HelloListResponse other) {
+        if (other == ai.zgc.HelloProto.HelloListResponse.getDefaultInstance()) return this;
+        if (!other.result_.isEmpty()) {
+          if (result_.isEmpty()) {
+            result_ = other.result_;
+            bitField0_ |= 0x00000001;
+          } else {
+            ensureResultIsMutable();
+            result_.addAll(other.result_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                java.lang.String s = input.readStringRequireUtf8();
+                ensureResultIsMutable();
+                result_.add(s);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.LazyStringArrayList result_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      private void ensureResultIsMutable() {
+        if (!result_.isModifiable()) {
+          result_ = new com.google.protobuf.LazyStringArrayList(result_);
+        }
+        bitField0_ |= 0x00000001;
+      }
+      /**
+       * <code>repeated string result = 1;</code>
+       * @return A list containing the result.
+       */
+      public com.google.protobuf.ProtocolStringList
+          getResultList() {
+        result_.makeImmutable();
+        return result_;
+      }
+      /**
+       * <code>repeated string result = 1;</code>
+       * @return The count of result.
+       */
+      public int getResultCount() {
+        return result_.size();
+      }
+      /**
+       * <code>repeated string result = 1;</code>
+       * @param index The index of the element to return.
+       * @return The result at the given index.
+       */
+      public java.lang.String getResult(int index) {
+        return result_.get(index);
+      }
+      /**
+       * <code>repeated string result = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the result at the given index.
+       */
+      public com.google.protobuf.ByteString
+          getResultBytes(int index) {
+        return result_.getByteString(index);
+      }
+      /**
+       * <code>repeated string result = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The result to set.
+       * @return This builder for chaining.
+       */
+      public Builder setResult(
+          int index, java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureResultIsMutable();
+        result_.set(index, value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string result = 1;</code>
+       * @param value The result to add.
+       * @return This builder for chaining.
+       */
+      public Builder addResult(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ensureResultIsMutable();
+        result_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string result = 1;</code>
+       * @param values The result to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllResult(
+          java.lang.Iterable<java.lang.String> values) {
+        ensureResultIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, result_);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string result = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearResult() {
+        result_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated string result = 1;</code>
+       * @param value The bytes of the result to add.
+       * @return This builder for chaining.
+       */
+      public Builder addResultBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ensureResultIsMutable();
+        result_.add(value);
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:HelloListResponse)
+    }
+
+    // @@protoc_insertion_point(class_scope:HelloListResponse)
+    private static final ai.zgc.HelloProto.HelloListResponse DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ai.zgc.HelloProto.HelloListResponse();
+    }
+
+    public static ai.zgc.HelloProto.HelloListResponse getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<HelloListResponse>
+        PARSER = new com.google.protobuf.AbstractParser<HelloListResponse>() {
+      @java.lang.Override
+      public HelloListResponse parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<HelloListResponse> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<HelloListResponse> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ai.zgc.HelloProto.HelloListResponse getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_HelloRequest_descriptor;
   private static final 
@@ -1129,6 +2365,16 @@ public final class HelloProto {
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_HelloResponse_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_HelloListRequest_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_HelloListRequest_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_HelloListResponse_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_HelloListResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -1139,10 +2385,16 @@ public final class HelloProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\013Hello.proto\"\034\n\014HelloRequest\022\014\n\004name\030\001 " +
-      "\001(\t\"\037\n\rHelloResponse\022\016\n\006result\030\001 \001(\t28\n\014" +
-      "HelloService\022(\n\005hello\022\r.HelloRequest\032\016.H" +
-      "elloResponse\"\000B\026\n\006ai.zgcB\nHelloProtoP\000b\006" +
-      "proto3"
+      "\001(\t\"\037\n\rHelloResponse\022\016\n\006result\030\001 \001(\t\" \n\020" +
+      "HelloListRequest\022\014\n\004name\030\001 \003(\t\"#\n\021HelloL" +
+      "istResponse\022\016\n\006result\030\001 \003(\t2\362\001\n\014HelloSer" +
+      "vice\022(\n\005hello\022\r.HelloRequest\032\016.HelloResp" +
+      "onse\"\000\0224\n\thelloList\022\021.HelloListRequest\032\022" +
+      ".HelloListResponse\"\000\022)\n\004c2ss\022\r.HelloRequ" +
+      "est\032\016.HelloResponse\"\0000\001\022)\n\004cs2s\022\r.HelloR" +
+      "equest\032\016.HelloResponse\"\000(\001\022,\n\005cs2ss\022\r.He" +
+      "lloRequest\032\016.HelloResponse\"\000(\0010\001B\026\n\006ai.z" +
+      "gcB\nHelloProtoP\000b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -1159,6 +2411,18 @@ public final class HelloProto {
     internal_static_HelloResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_HelloResponse_descriptor,
+        new java.lang.String[] { "Result", });
+    internal_static_HelloListRequest_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_HelloListRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_HelloListRequest_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_HelloListResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_HelloListResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_HelloListResponse_descriptor,
         new java.lang.String[] { "Result", });
   }
 

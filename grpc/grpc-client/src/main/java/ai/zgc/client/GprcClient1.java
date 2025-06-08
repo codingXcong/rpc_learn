@@ -1,7 +1,5 @@
 package ai.zgc.client;
 
-import ai.zgc.HelloProto;
-import ai.zgc.HelloServiceGrpc;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
